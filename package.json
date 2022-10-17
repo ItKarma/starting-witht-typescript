@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/danzok/starting-witht-typescript/issues"
   },
-  "homepage": "https://github.com/danzok/starting-witht-typescript#readme"
+  "homepage": "https://github.com/danzok/starting-witht-typescript#readme",
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  }
 }
