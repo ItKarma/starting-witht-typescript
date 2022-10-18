@@ -5,3 +5,5 @@
 ![status200](https://telegra.ph/file/4b110665cf25c33315701.png)
 
 - This api has 4 endpoints, one with put , delete , get , and post method.
+
+- so this one can create , update , delete and read the documents consulting the database 
