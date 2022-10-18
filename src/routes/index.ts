@@ -20,8 +20,14 @@ router.post('/create', async (req: Request, res: Response)=>{
 })
 
 router.get('/list', async (req: Request, res: Response)=>{
-      let allTask = new taskSchema.all();
-      console.log(allTask)
+    
+      let allTask = await taskSchema.find();
+      try{
+          res.status(200).json(allTask)
+      }catch(e){
+          res.status(400).json({ message : 'there was an internal error'})
+          console.log(e)
+      }
 })
 
 export default router;
