@@ -1,6 +1,6 @@
 import express from 'express';
 import morgan from 'morgan';
-import router from './routes';
+import rootRouter from './routes';
 
 export default class Application {
     app: express.Application;
@@ -14,10 +14,11 @@ export default class Application {
     
     middlewares(){
         this.app.use(morgan('dev'));
+        this.app.use(express.json());
     }
     
     routes(){
-        this.app.use(router)
+        this.app.use(rootRouter)
     }
     
     start(){
