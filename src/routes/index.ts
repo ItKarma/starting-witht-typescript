@@ -30,4 +30,15 @@ router.get('/list', async (req: Request, res: Response)=>{
       }
 })
 
+router.delete('/delete/:id', async (req:Request, res:Response)=>{
+   const { id } = req.params;
+   try{
+       await taskSchema.findByIdAndDelete(id);
+       res.status(200).json({ message : "task deleted successfully "})
+   }catch(e){
+       console.log(e)
+       res.status(400).json({ message:" try again "})
+   }
+})
+
 export default router;
