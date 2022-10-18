@@ -1,5 +1,6 @@
 import express from 'express';
 import morgan from 'morgan';
+import router from './routes';
 
 export default class Application {
     app: express.Application;
@@ -16,7 +17,7 @@ export default class Application {
     }
     
     routes(){
-        
+        this.app.use(router)
     }
     
     start(){
