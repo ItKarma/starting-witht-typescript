@@ -17,7 +17,7 @@ const mongoose_1 = __importDefault(require("mongoose"));
 function connectDb() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            yield mongoose_1.default.connect('mongodb+srv://Lopes01:Lopes01@cluster0.evxl2c8.mongodb.net/?retryWrites=true&w=majority');
+            yield mongoose_1.default.connect('your uri');
             console.log(">>> database connected.");
         }
         catch (e) {
