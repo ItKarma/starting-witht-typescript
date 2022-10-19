@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 
 async function connectDb(){
     try{
-        await mongoose.connect('mongodb+srv://Lopes01:Lopes01@cluster0.evxl2c8.mongodb.net/?retryWrites=true&w=majority')
+        await mongoose.connect('your uri')
         console.log(">>> database connected.")
         
     }catch(e){
